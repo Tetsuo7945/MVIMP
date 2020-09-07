@@ -50,8 +50,8 @@ def animeganv1_preparation():
     os.makedirs(vgg_dir, exist_ok=True)
 
     downloader(external_links["animeganv1-pretrain-model"], pretrain_model_file)
+    downloader(external_links["animeganv1-pretrain-model"], vgg_file)
     os.system(f"unzip {pretrain_model_file} -d {pretrain_model_dir}")
-    os.system(f"wget {external_links['animeganv1-vgg-weights']} -O {vgg_file}")
     os.system(f"rm {pretrain_model_file}")
 
 
